@@ -27,10 +27,10 @@ export const getTokenFromUrl = () =>{
     //the reduce splits the url from = and takes the acessToken
 //go into the initial array that is being returned and for the accessToken, [parts[0]], decodeURIComponent that is "mysuperkey" and we passing it to [parts[1]]
         let parts = item.split("=");
-        initial[parts[0]] = decodeURIComponent(parts[1])
+        initial[parts[0]] = decodeURIComponent(parts[1]);
 
         return initial;
      }, {});
-}
+};
 
 export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show-dialog=true`;
