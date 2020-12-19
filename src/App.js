@@ -11,7 +11,7 @@ const spotify = new SpotifyWebApi();
 export default function App() {
 //the dispatch will be the tool that will make possible to change and update the data
 
-  const [{ token }, dispatch] = useStateValue();
+  const [ {token}, dispatch] = useStateValue();
 //Run code based on a given condition, so the function that is inside the UseEffect Hook
 // whenever info variable changes on the url the code will run 
 
