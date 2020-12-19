@@ -4,7 +4,7 @@ export const initialState = {
     playing: false,
     item: null, 
     token: null,
-};
+}; 
 
 //the state is how it currently looks, like something form list above
 // the action how we manipulate how tha data looks like. Set the user, set the currently playing etc
@@ -24,13 +24,18 @@ switch(action.type) {
             user: action.user,
         };
 
-    case "SET_TOKKEN":
-        return{
-        ...state,
-        token: action.token
-        }
+        case "SET_TOKEN":
+            return {
+                ...state,
+                token: action.token,
+            };
 
-        default: 
+            case "SER_PLAYLISTS":
+                return {
+                    ...state,
+                    playlists: action.playlists,
+                };
+  default: 
         return state;
 }
 };
