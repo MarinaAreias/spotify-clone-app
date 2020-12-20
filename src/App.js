@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import SpotifyWebApi from "spotify-web-api-js";
-import { useStateValue } from "./StateProvider";
+import {useDataLayerValue } from "./DataLayer";
 import Player from "./Player";
 import { getTokenFromResponse } from "./spotify";
 import "./App.css";
@@ -12,7 +12,7 @@ export default function App() {
 //the dispatch will be the tool that will make possible to change and update the data
 
 // eslint-disable-next-line
-  const [ {token}, dispatch] = useStateValue();
+  const [ {token}, dispatch] = useDataLayerValue();
 //Run code based on a given condition, so the function that is inside the UseEffect Hook
 // whenever info variable changes on the url the code will run 
 

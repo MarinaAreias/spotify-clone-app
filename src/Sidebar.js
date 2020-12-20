@@ -8,6 +8,7 @@ import { useDataLayerValue } from "./DataLayer";
 
 
 export default function Sidebar(){
+    // eslint-disable-next-line
     const [{ playlists }, dispatched] = useDataLayerValue()
     return (
         <div className="sidebar">
