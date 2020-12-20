@@ -10,11 +10,13 @@ import SongRow from "./SongRow";
 
 export default function Body(spotify){
 
-    // eslint-disable-next-line
-    const [{discover_weekly}, dispatch] = useDataLayerValue();
+    
+    const [{ discover_weekly }, dispatch] = useDataLayerValue();
+
     return (
         <div  className="body">
             <Header spotify={spotify}/>
+
             <div className="bodyInfo">
                 <img src={discover_weekly?.images[0].url}
                 alt="discover weekly"/>
@@ -25,7 +27,7 @@ export default function Body(spotify){
                     <h2>
                         Discover Weekly
                     </h2>
-                    <p> {discover_weekly?.description} </p>
+                    <p> { discover_weekly?.description } </p>
                 </div>
             </div>
             <div className="bodySongs">
@@ -41,6 +43,7 @@ export default function Body(spotify){
 
             </div>
         </div>
+      
     );
 
 }

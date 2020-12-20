@@ -30,7 +30,7 @@ switch(action.type) {
                 token: action.token,
             };
 
-            case "SER_PLAYLISTS":
+            case "SET_PLAYLISTS":
                 return {
                     ...state,
                     playlists: action.playlists,

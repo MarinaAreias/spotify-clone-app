@@ -7,6 +7,7 @@ const redirectUri = "http://localhost:3000/";
 
 const clientId= "940e9df64b3248a3825dc1297482e208";
 
+
 const scopes = [
     "user-read-currently-playing",
     "user-read-recently-played",
@@ -17,7 +18,7 @@ const scopes = [
 
 // look more into reduce functions
 
-export const getTokenFromResponse = () =>{
+export const getTokenFromUrl = () =>{
     return window.location.hash 
     .substring(1)
     .split("&")
@@ -25,7 +26,7 @@ export const getTokenFromResponse = () =>{
         // #accessToken=mysuperKey&name=john&joe
     //the reduce splits the url from = and takes the acessToken
 //go into the initial array that is being returned and for the accessToken, [parts[0]], decodeURIComponent that is "mysuperkey" and we passing it to [parts[1]]
-        let parts = item.split("=");
+        var parts = item.split("=");
         //accessTooken is the part0
         initial[parts[0]] = decodeURIComponent(parts[1]);
 

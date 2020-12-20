@@ -5,7 +5,7 @@ import {Avatar} from "@material-ui/core";
 import {useDataLayerValue } from "./DataLayer";
 
 export default function Header(){
-    // eslint-disable-next-line
+    
     const [{ user }, dispatch] = useDataLayerValue();
     return(
         <div className="header">

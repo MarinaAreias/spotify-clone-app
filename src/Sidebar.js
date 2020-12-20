@@ -8,8 +8,9 @@ import { useDataLayerValue } from "./DataLayer";
 
 
 export default function Sidebar(){
-    // eslint-disable-next-line
-    const [{ playlists }, dispatched] = useDataLayerValue()
+    
+
+    const [{ playlists },dispatched] = useDataLayerValue()
     return (
         <div className="sidebar">
             <img
@@ -25,14 +26,10 @@ export default function Sidebar(){
             <strong className="sidebarTitle"> PLAYLISTS </strong> 
             <hr />
 
-            {playlists?.items?.map(playlists => 
-            (
+            {playlists?.items?.map ((playlists) => (
               <SidebarOption  title={playlists.name}/> 
              ))};
-
-            
              
-
         </div>
     )
 }
