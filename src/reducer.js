@@ -35,6 +35,12 @@ switch(action.type) {
                     ...state,
                     playlists: action.playlists,
                 };
+
+                case "SET_DISCOVER-WEEKLY":
+                   return{ ...state,
+                    discover_weekly: action.discover_weekly, 
+                };
+                
   default: 
         return state;
 }

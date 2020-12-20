@@ -11,6 +11,7 @@ const spotify = new SpotifyWebApi();
 export default function App() {
 //the dispatch will be the tool that will make possible to change and update the data
 
+// eslint-disable-next-line
   const [ {token}, dispatch] = useStateValue();
 //Run code based on a given condition, so the function that is inside the UseEffect Hook
 // whenever info variable changes on the url the code will run 
@@ -29,7 +30,7 @@ export default function App() {
         token: _token,
       });
 
-      spotify.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
+      spotify.getPlaylist("37i9dQZEVXcGE3bYuPUwd6?si=xaF7HzgAQoCu023WIOEF9Q").then((response) =>
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
@@ -61,7 +62,7 @@ export default function App() {
           playlists: playlists,
         });
       });
-      
+    
     }
   }, [token, dispatch]);
 

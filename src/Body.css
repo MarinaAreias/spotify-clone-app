@@ -4,4 +4,57 @@
   height: 100vh;
   color: white;
   padding: 30px;
+  overflow-y: overlay;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+.bodyInfo {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+.bodyInfo img {
+  height: 20vw;
+  margin: 0 20px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.bodyInfoText {
+  flex: 1;
+}
+
+.bodyInfoText h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.bodyInfoText p {
+  font-size: 14px;
+}
+
+.bodySongs {
+  margin: 20px -30px;
+}
+
+.bodyIcons {
+  display: flex;
+  align-items: center;
+}
+
+.bodyIcons .MuiSvgIcon-root {
+  margin-right: 20px;
+}
+
+.bodyShuffle {
+  font-size: 80px !important;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bodyShuffle:hover {
+  transition: 100ms transform ease-in;
+  transform: scale(1.08);
 }
